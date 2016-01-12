@@ -9,7 +9,7 @@
 <?php require_once ("./header.php"); ?>
 
 <?php
-    // kıik mis seotud andmetabeliga, lisamine ja tabeli kujul esitamine
+    // k√µik mis seotud andmetabeliga, lisamine ja tabeli kujul esitamine
     require_once("functions.php");
     
     //kui kasutaja ei ole sisse logitud, suuna teisele lehele
@@ -26,7 +26,7 @@
     }
 	
 	
-	// muutujad v‰‰rtustega
+	// muutujad v√§√§rtustega
 	$m = "";
 	$url = "";
 	$url_error = "";
@@ -51,13 +51,13 @@
 			}		
 			
 			if (empty($_POST["title"]))  {
-				$title_error = "Video pealkirja m‰‰ramine on kohustuslik";
+				$title_error = "Video pealkirja m√§√§ramine on kohustuslik";
 			}else{
 				$title = cleanInput($_POST["title"]);
 			}
 			
 			if (empty($_POST["keywords"]))  {
-				$keywords_error = "Videole m‰rksınade lisamine on kohustuslik";
+				$keywords_error = "Videole m√§rks√µnade lisamine on kohustuslik";
 			}else{
 				$keywords = cleanInput($_POST["keywords"]);
 			}			
@@ -89,7 +89,7 @@
 	
 	
 	
-	//kıik objektide kujul massiivis
+	//k√µik objektide kujul massiivis
 	$video_array=getAllVideos();
 	
 	$keyword="";
@@ -100,14 +100,14 @@
 		$song_array=getAllVideos($keyword);
 		
 	}else{
-		//n‰itame kıiki tulemusi
-		//kıik objektide kujul massiivis
+		//n√§itame k√µiki tulemusi
+		//k√µik objektide kujul massiivis
 		$video_array=getAllVideos();
 	}
 	
 ?>
 
-Tere, <?=$_SESSION['logged_in_user_email'];?> <a href="?logout=1">Logi v‰lja</a>
+Tere, <?=$_SESSION['logged_in_user_email'];?> <a href="?logout=1">Logi v√§lja</a>
 
 <h2> Lisa uus video</h2>
 

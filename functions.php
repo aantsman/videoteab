@@ -3,13 +3,13 @@
     require_once("../config_global.php");
     $database = "if15_anniant";
     
-    //paneme sessiooni serveris tööle, saaame kasutada SESSION[]
+    //paneme sessiooni serveris tÃ¶Ã¶le, saaame kasutada SESSION[]
     session_start();
     
     
     function logInUser($email, $hash){
         
-        // GLOBALS saab kätte kõik muutujad mis kasutusel
+        // GLOBALS saab kÃ¤tte kÃµik muutujad mis kasutusel
         $mysqli = new mysqli($GLOBALS["servername"], $GLOBALS["serverusername"], $GLOBALS["serverpassword"], $GLOBALS["database"]);
         
         $stmt = $mysqli->prepare("SELECT id, email FROM user_sample WHERE email=? AND password=?");
@@ -57,9 +57,9 @@
 		
 		$message="";
 		
-		//kui õnnestub siis tõene kui viga siis else
+		//kui Ãµnnestub siis tÃµene kui viga siis else
 		if ($stmt->execute()){
-			//õnnestus
+			//Ãµnnestus
 			$message="Video edukalt andmebaasi salvestatud";
 		}
 		
@@ -69,7 +69,7 @@
 		return $message;
 	}
 	
-	//vaikeväärtus sulgudes, et vältida errorit, mis tekiks
+	//vaikevÃ¤Ã¤rtus sulgudes, et vÃ¤ltida errorit, mis tekiks
     function getAllVideos($keyword=""){
 		
 		//OTSIMINE
@@ -98,7 +98,7 @@
         while($stmt->fetch()){
 			//suvaline muutuja kus hoiame andmeid kuni massiivi lisamiseni
 			
-			//tühi objekt kus hoiame väärtusi
+			//tÃ¼hi objekt kus hoiame vÃ¤Ã¤rtusi
 			$video=new StdClass();
 			
 			$video->id=$id_from_db;
@@ -130,7 +130,7 @@
         $stmt->bind_param("sssi", $video_url, $video_title, $video_keywords, $video_id);
         $stmt->execute();
 		
-		//tühjendame aadressirea
+		//tÃ¼hjendame aadressirea
 		
 		$stmt->close();
 		$mysqli->close();

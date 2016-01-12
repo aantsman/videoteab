@@ -1,7 +1,7 @@
 Videote andmebaas
 
-*Vıimalda tabelisse lisada video URL, pealkiri ja m‰rksınad.
+*V√µimalda tabelisse lisada video URL, pealkiri ja m√§rks√µnad.
 
-*Lisaks eelmisele on vıimalik nii pealkirja kui ka m‰rksınade j‰rgi otsida.
+*Lisaks eelmisele on v√µimalik nii pealkirja kui ka m√§rks√µnade j√§rgi otsida.
 
-*Lisaks eelmisele on registreeritud kasutajatel vıimalik video andmeid t‰iendada ja parandada.
+*Lisaks eelmisele on registreeritud kasutajatel v√µimalik video andmeid t√§iendada ja parandada.

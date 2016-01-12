@@ -15,7 +15,7 @@
 	$create_username_error="";
 	
 
-	// muutujad v‰‰rtuste jaoks
+	// muutujad v√§√§rtuste jaoks
 	$email = "";
 	$password = "";
 	$create_email = "";
@@ -31,21 +31,21 @@
 		if(isset($_POST["login"])){
 			
 			if ( empty($_POST["email"]) ) {
-				$email_error = "See v‰li on kohustuslik";
+				$email_error = "See v√§li on kohustuslik";
 			}else{
 				
-        // puhastame muutuja vıimalikest ¸leliigsetest s¸mbolitest
+        // puhastame muutuja v√µimalikest √ºleliigsetest s√ºmbolitest
 				$email = cleanInput($_POST["email"]);
 			}
 			if ( empty($_POST["password"]) ) {
-				$password_error = "See v‰li on kohustuslik";
+				$password_error = "See v√§li on kohustuslik";
 			}else{
 				$password = cleanInput($_POST["password"]);
 			}
 			
-		// Kui oleme siia jıudnud, vıime kasutaja sisse logida
+		// Kui oleme siia j√µudnud, v√µime kasutaja sisse logida
 			if($password_error == "" && $email_error == ""){
-				//echo "Vıib sisse logida! Kasutajanimi on ".$email." ja parool on ".$password;
+				//echo "V√µib sisse logida! Kasutajanimi on ".$email." ja parool on ".$password;
 			
                 $hash = hash("sha512", $password);
                 
@@ -61,31 +61,31 @@
     if(isset($_POST["create"])){
 		
 			if ( empty($_POST["create_email"]) ) {
-				$create_email_error = "See v‰li on kohustuslik";
+				$create_email_error = "See v√§li on kohustuslik";
 			}else{
 				$create_email = cleanInput($_POST["create_email"]);
 			}
 			
 			if ( empty($_POST["create_password"]) ) {
-				$create_password_error = "See v‰li on kohustuslik";
+				$create_password_error = "See v√§li on kohustuslik";
 			} else {
 				if(strlen($_POST["create_password"]) < 8) {
-					$create_password_error = "Peab olema v‰hemalt 8 t‰hem‰rki pikk!";
+					$create_password_error = "Peab olema v√§hemalt 8 t√§hem√§rki pikk!";
 				}else{
 					$create_password = cleanInput($_POST["create_password"]);
 				}
 			}
 			if ( empty($_POST["create_username"]) ) {
-				$create_username_error = "See v‰li on kohustuslik";
+				$create_username_error = "See v√§li on kohustuslik";
 			}else{
 				$create_username = cleanInput($_POST["create_username"]);
 			}
 			
 			if(	$create_email_error == "" && $create_password_error == "" && $create_username_error == ""){
 				//echo hash("sha512", $create_password);
-                //echo "Vıib kasutajat luua! Kasutajanimi on ".$create_email." ja parool on ".$create_password;
+                //echo "V√µib kasutajat luua! Kasutajanimi on ".$create_email." ja parool on ".$create_password;
                 
-                // tekitan paroolir‰si
+                // tekitan paroolir√§si
                 $hash = hash("sha512", $create_password);
                 
                 //functions.php's funktsioon
@@ -96,7 +96,7 @@
         } // create if end
 	}
 	
-  // funktsioon, mis eemaldab kıikvıimaliku ¸leliigse tekstist
+  // funktsioon, mis eemaldab k√µikv√µimaliku √ºleliigse tekstist
   function cleanInput($data) {
   	$data = trim($data);
   	$data = stripslashes($data);

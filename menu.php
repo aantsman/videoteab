@@ -1,8 +1,8 @@
-<h3>Menüü</h3>
+<h3>MenÃ¼Ã¼</h3>
 
 <ul>
 	<?php
-	// ükskõik mis lehe puhul näitan linki aga kui on home leht siis nime
+	// Ã¼kskÃµik mis lehe puhul nÃ¤itan linki aga kui on home leht siis nime
 	if($page_file_name != "home.php") { ?>
 	<li><a href="home.php">Avaleht</a></li>
 	<?php } else {  ?>
@@ -10,7 +10,7 @@
 	<?php } ?>
 	
 	<?php
-	// ükskõik mis lehe puhul näitan linki aga kui on home leht siis nime
+	// Ã¼kskÃµik mis lehe puhul nÃ¤itan linki aga kui on home leht siis nime
 	if($page_file_name != "login.php") { ?>
 	<li><a href="login.php">Logi sisse</a></li>
 	<?php } else {  ?>
@@ -18,7 +18,7 @@
 	<?php } ?>
 	
 	<?php
-	// ükskõik mis lehe puhul näitan linki aga kui on home leht siis nime
+	// Ã¼kskÃµik mis lehe puhul nÃ¤itan linki aga kui on home leht siis nime
 	if($page_file_name != "data.php") { ?>
 	<li><a href="data.php">Lisa video</a></li>
 	<?php } else {  ?>

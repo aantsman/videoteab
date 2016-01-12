@@ -24,7 +24,7 @@
 	
 	
 	
-	//kıik objektide kujul massiivis
+	//k√µik objektide kujul massiivis
 	$video_array=getAllVideos();
 	
 	$keyword="";
@@ -35,8 +35,8 @@
 		$video_array=getAllVideos($keyword);
 		
 	}else{
-		//n‰itame kıiki tulemusi
-		//kıik objektide kujul massiivis
+		//n√§itame k√µiki tulemusi
+		//k√µik objektide kujul massiivis
 		$video_array=getAllVideos();
 	}
 	
@@ -55,7 +55,7 @@
 
 	<th>Video URL</th>
 	<th>Pealkiri</th>
-	<th>M‰rksınad</th>
+	<th>M√§rks√µnad</th>
 	
 	<?php 
 	if(isset($_SESSION['logged_in_user_id'])){
@@ -66,7 +66,7 @@
 
 <?php 
 	
-	//¸kshaaval l‰bi k‰ia
+	//√ºkshaaval l√§bi k√§ia
 	for($i=0; $i<count($video_array); $i++){
 		
 		//kasutaja tahab rida muuta
@@ -74,7 +74,7 @@
 			echo "<tr>";
 			echo "<form action='data.php' method='get'>";
 			
-			//input mida v‰lja ei n‰idata 
+			//input mida v√§lja ei n√§idata 
 			echo "<input type='hidden' name='video_id' value='".$video_array[$i]->id."'>";
 			
 			echo "<td><input name='url' type='text' value='".$video_array[$i]->url."'></td>";
