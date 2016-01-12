@@ -63,7 +63,7 @@
 			}			
 			
 			if($url_error == "" && $title_error == "" && $keywords_error == ""){
-				echo "siin";
+				//echo "siin";
 				$m=createVideo($url, $title, $keywords);
 				
 				
@@ -78,16 +78,15 @@
 		return $data;
 	}
 	
-	getAllSongs();
+	getAllVideos();
 	
   	//kasutaja muudab andmeid
 	if(isset($_GET["update"])){
 		
 		//
-		updateVideoData($_GET["video_id"]);
+		updateVideoData($_GET["video_id"], $_GET["url"], $_GET["title"], $_GET["keywords"]);
 	}
-	
-	
+
 	
 	//kõik objektide kujul massiivis
 	$video_array=getAllVideos();

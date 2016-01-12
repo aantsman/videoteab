@@ -51,7 +51,7 @@
 	
 	function createVideo($url, $title, $keywords){
 		
-		$mysqli = new mysqli($GLOBALS["servername"], $GLOBALS["username"], $GLOBALS["password"], $GLOBALS["database"]);
+		$mysqli = new mysqli($GLOBALS["servername"], $GLOBALS["serverusername"], $GLOBALS["serverpassword"], $GLOBALS["database"]);
 		$stmt = $mysqli->prepare("INSERT INTO videos (url, title, keywords) VALUES (?,?,?)");
 		$stmt->bind_param("sss", $url, $title, $keywords);
 		
