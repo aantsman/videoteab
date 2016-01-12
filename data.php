@@ -80,11 +80,12 @@
 	
 	getAllVideos();
 	
-  	//kasutaja muudab andmeid
-	if(isset($_GET["update"])){
-		
-		//
+	//kontrollin kas kasutaja on sisse logitud
+	if(isset($_SESSION['logged_in_user_id'])){
+		//kasutaja muudab andmeid
+		if(isset($_GET["update"])){
 		updateVideoData($_GET["video_id"], $_GET["url"], $_GET["title"], $_GET["keywords"]);
+		}
 	}
 
 	

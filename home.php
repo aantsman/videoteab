@@ -14,15 +14,13 @@
 <?php 
 	require_once("functions.php");
 	
-	
-	//kasutaja muudab andmeid
-	if(isset($_GET["update"])){
-		
-		//
-		updateVideoData($_GET["video_id"]);
+	//kontrollin kas kasutaja on sisse logitud
+	if(isset($_SESSION['logged_in_user_id'])){
+		//kasutaja muudab andmeid
+		if(isset($_GET["update"])){
+		updateVideoData($_GET["video_id"], $_GET["url"], $_GET["title"], $_GET["keywords"]);
+		}
 	}
-	
-	
 	
 	//kõik objektide kujul massiivis
 	$video_array=getAllVideos();
