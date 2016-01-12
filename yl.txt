@@ -1,0 +1,7 @@
+Videote andmebaas
+
+*Võimalda tabelisse lisada video URL, pealkiri ja märksõnad.
+
+*Lisaks eelmisele on võimalik nii pealkirja kui ka märksõnade järgi otsida.
+
+*Lisaks eelmisele on registreeritud kasutajatel võimalik video andmeid täiendada ja parandada.
